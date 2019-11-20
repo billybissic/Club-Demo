@@ -1,0 +1,41 @@
+@import './../../../sass/variables.scss';
+@import './../../../../src/menage-palettes';
+@import '~@angular/material/theming';
+
+%menage-navigation {
+    background-color: mat-color($mat-menage-pink, 900) !important;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, .5);
+    margin-bottom: 10px;
+
+}
+
+.nav-btn {
+  font-family: 'Open Sans', sans-serif;
+}
+%menage-nav-links {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 9pt;
+    font-weight: 500;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+.menage-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  color: #065ed5 !important;
+}
+
+.navbar {
+    @extend %menage-navigation;
+    @extend %menage-nav-links;
+}
+#nav-brand {
+  color: white !important;
+}
+a:hover {
+    opacity: .9;
+}

@@ -1,0 +1,21 @@
+<div class="container">
+  <img [src]="img_url" class="img-responsive image">
+  <div class="overlay">
+    <div class="text">
+      {{name}}<br>
+      {{description}}
+    </div>
+  </div>
+  <div class="controls-overlay">
+    <div class="btn-toolbar justify-content-center">
+    <div class="btn-group-lg">
+        <button type="button" class="btn"><fa-icon [icon]="faChevronLeft"></fa-icon></button>
+        <button type="button" class="btn"><fa-icon [icon]="faStop"></fa-icon></button>
+        <button type="button" class="btn"><fa-icon [icon]="faPlay"></fa-icon></button>
+        <button type="button" class="btn"><fa-icon [icon]="faShareAlt"></fa-icon></button>
+        <button type="button" class="btn"><fa-icon [icon]="faExpand"></fa-icon></button>
+        <button type="button" class="btn"><fa-icon [icon]="faChevronRight"></fa-icon></button>
+    </div>
+    </div>
+  </div>
+</div>

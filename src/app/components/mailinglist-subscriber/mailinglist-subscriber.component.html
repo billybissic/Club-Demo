@@ -1,0 +1,45 @@
+<div class="landing-page">
+  <div class="jumbotron justify-content-center">
+    <div class="brand-logo">
+      <!-- menage brand logo image -->
+    </div>
+  </div>
+  <div class="mailinglist-label">
+    <p>Join our mailing list!</p>
+  </div>
+
+  <div class="container-fluid mailing-list">
+    <form (ngSubmit)="submitNewSubscriber()" novalidate>
+      <div class="form row">
+        <div [formGroup]="mailingListForm" class="form-group col-sm-3">
+          <mat-form-field class="mailing-list-controls" color="accent">
+            <input matInput placeholder="First Name*" value="" formControlName="firstName" color="accent">
+          </mat-form-field>
+        </div>
+        <div [formGroup]="mailingListForm" class="form-group col-sm-3">
+          <mat-form-field class="mailing-list-controls" color="accent">
+            <input matInput placeholder="Last Name*" value="" formControlName="lastName">
+          </mat-form-field>
+        </div>
+        <div [formGroup]="mailingListForm" class="form-group col-sm-3">
+          <mat-form-field class="mailing-list-controls" color="accent">
+            <input matInput [matDatepicker]="picker" value="" placeholder="Birthday*" formControlName="birthday">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div [formGroup]="mailingListForm" class="form-group col-sm-3">
+          <mat-form-field class="mailing-list-controls" color="accent">
+            <input matInput placeholder="Email Address*" formControlName="emailAddress">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="form row">
+        <div class="form-group col-sm-3 mailinglist-btn">
+          <button mat-raised-button color="accent" class="form-control mailinglist-button" type="submit">Subscribe</button>
+          <!--<button type="submit" class="btn btn-block mailinglist-button">Subscribe</button>-->
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

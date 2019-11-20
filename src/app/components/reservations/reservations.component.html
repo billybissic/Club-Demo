@@ -1,0 +1,91 @@
+<div class="container">
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+          <h4 class="reservation-header">Reservations</h4>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">&nbsp;</div>
+      <div class="col-sm-8 justify-content-center">
+        <div class="jumbotron reservation-jumbtron">
+          <form (ngSubmit)="submitNewReservation()" novalidate>
+            <div [formGroup]="reservationsForm">
+              <mat-form-field class="reservation-input">
+                <input matInput placeholder="First Name*" formControlName="firstName">
+              </mat-form-field>
+            </div>
+
+            <div [formGroup]="reservationsForm">
+              <mat-form-field class="reservation-input">
+                <input matInput placeholder="Last Name*" formControlName="lastName">
+              </mat-form-field>
+            </div>
+
+            <div [formGroup]="reservationsForm">
+              <mat-form-field class="reservation-input">
+                <input matInput placeholder="Email*" formControlName="email">
+              </mat-form-field>
+            </div>
+
+            <div [formGroup]="reservationsForm">
+              <mat-form-field class="reservation-input">
+                <span matPrefix>+1 &nbsp;</span>
+                <input matInput placeholder="Phone Number (###)-###-####" type="phone" formControlName="phone">
+              </mat-form-field>
+            </div>
+
+            <div [formGroup]="reservationsForm">
+              <mat-form-field class="reservation-input">
+                <input matInput placeholder="Number of People in Party" type="number" formControlName="partySize">
+              </mat-form-field>
+            </div>
+
+            <div [formGroup]="reservationsForm">
+              <mat-form-field class="reservation-input" color="accent">
+                <input matInput [matDatepicker]="picker" value="" placeholder="Desired Day to Reserve*" formControlName="desiredReservationsDate">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+
+            <div [formGroup]="reservationsForm">
+              <mat-form-field class="reservation-input">
+                <input type="time" matInput atp-time-picker placeholder="Desired Time to Reserve" formControlName="desiredReservationsTime"
+                theme="dark" arrowStyle="{'background': '#ff00fe', 'color': 'white'}">
+              </mat-form-field>
+            </div>
+
+            <div [formGroup]="reservationsForm">
+              <mat-form-field class="reservation-input">
+                <mat-select placeholder="Preferred Contact Time" formControlName="contactTime">
+                  <mat-option *ngFor="let time of contactTimes" [value]="time.contact_timeframe_id">
+                    {{time.contact_timeframe}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div [formGroup]="reservationsForm">
+              <mat-form-field class="reservation-input">
+                <mat-select placeholder="Preferred Reservation Type" formControlName="reservationType">
+                  <mat-option *ngFor="let type of reservationTypes" [value]="type.inquiry_type_id">
+                    {{type.inquiry_type_name}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <button mat-raised-button color="accent" class="form-control reservation-button" type="submit">Make Reservation</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-sm-2"></div>
+     </div>
+  </div>
+  <br>
+  <br>

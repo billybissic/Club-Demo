@@ -1,0 +1,39 @@
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+    <a class="menage-brand">Club</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample04">
+      <ul class="navbar-nav mr-auto">
+
+        <button [ngx-scroll-to]="'#home'" mat-flat-button color="warn" class="nav-btn">
+           Home
+        </button>
+
+        <button [ngx-scroll-to]="'#specials'" mat-flat-button color="warn" class="nav-btn">
+          Club Specials
+        </button>
+
+        <button [ngx-scroll-to]="'#events'" mat-flat-button color="warn" class="nav-btn">
+          Events
+        </button>
+
+        <button [hidden]="!show" mat-flat-button color="warn" class="nav-btn">
+          Entertainers
+        </button>
+
+        <button [hidden]="!show" mat-flat-button color="warn" class="nav-btn">
+           Gallery
+        </button>
+
+        <button [ngx-scroll-to]="'#reservations'" mat-flat-button color="warn" class="nav-btn">
+          Reservations
+        </button>
+
+        <button [ngx-scroll-to]="'#contact'" mat-flat-button color="warn" class="nav-btn">
+          Contact
+        </button>
+      </ul>
+    </div>
+  </nav>

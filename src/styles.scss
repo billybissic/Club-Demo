@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic&amp;subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Over+the+Rainbow');
+@import 'menage-theme.scss';
+@import './sass/variables.scss';
+@import './menage-palettes';
+
+%menage-body {
+    margin-top: 0px;
+    margin-left: 0px;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+.html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.body {
+    @extend %menage-body;
+}
+
+::ng-deep .mat-select-content{
+  background-color: $menage-pink !important;
+}
+::ng-deep .mat-select-panel {
+  background-color: $menage-pink;
+}
+
+

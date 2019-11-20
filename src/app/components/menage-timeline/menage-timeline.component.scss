@@ -1,0 +1,22 @@
+@import './../../../sass/variables.scss';
+@import './../../../menage-palettes';
+@import '~@angular/material/theming';
+
+.event-container {
+  width: 100vw;
+  background-color: #474e5d;
+}
+.events-header {
+  font-family: 'Great Vibes', cursive;
+  font-size: 40pt;
+  line-height: 9pt;
+  word-spacing: 1pt;
+  font-weight: 100;
+  text-align: center;
+  color: white;
+}
+
+.events-timeline {
+  overflow: visible;
+  overflow-scrolling: auto;
+}
